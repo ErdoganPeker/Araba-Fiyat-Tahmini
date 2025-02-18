@@ -29,18 +29,19 @@ ve diğer birçok farklı model bulunmaktadır.
 🔰 **EĞİTİM VE DEĞERLENDİRME METRİKLERİ**  
 Eğitim sırasında k-fold çapraz doğrulama yöntemi kullanılacak ve her modelin doğruluk oranları, R² skoru, MAE, MSE gibi metriklerle değerlendirilecektir. Bu metrikler, modellerin performansını karşılaştırmak ve en iyi tahmin modelini seçmek için kullanılacaktır. Ayrıca, aşağıdaki gibi sonuçlar elde edilmiştir:
 
+İşte sonuçların **e** cinsinden yazılmış hali:
+
 | Model               | RMSE        | MAE         | R²        |
 |---------------------|-------------|-------------|-----------|
-| **CatBoost**         | 420,839.37  | 208,912.69  | 0.9599    |
-| **Random Forest**    | 497,590.73  | 244,230.84  | 0.9439    |
-| **XGBoost**          | 511,870.54  | 245,187.73  | 0.9407    |
-| **Gradient Boosting**| 516,620.32  | 245,088.07  | 0.9396    |
-| **LightGBM**         | 605,875.79  | 284,540.01  | 0.9169    |
-| **KNN Regressor**    | 654,552.03  | 320,623.90  | 0.9030    |
-| **Ridge Regression** | 972,645.39  | 574,575.16  | 0.7858    |
-| **Lasso Regression** | 976,725.07  | 572,351.02  | 0.7840    |
-| **Linear Regression**| 976,739.27  | 572,359.94  | 0.7840    |
-| **Elastic Net**      | 1,212,411.51| 691,711.30  | 0.6672    |
-| **SVR**              | 2,310,353.63| 1,268,283.54| -0.2085   |
-
+| **CatBoost**         | 4.143331e-05 | 2.089880e-05 | 0.961134  |
+| **Random Forest**    | 4.961388e-05 | 2.444697e-05 | 0.944271  |
+| **XGBoost**          | 5.506966e-05 | 2.456692e-05 | 0.931341  |
+| **Gradient Boosting**| 5.081543e-05 | 2.317647e-05 | 0.941539  |
+| **LightGBM**         | 6.041947e-05 | 2.807798e-05 | 0.917353  |
+| **KNN Regressor**    | 6.545520e-05 | 3.206239e-05 | 0.903002  |
+| **Ridge Regression** | 9.726454e-05 | 5.745752e-05 | 0.785817  |
+| **Lasso Regression** | 9.767336e-05 | 5.723580e-05 | 0.784013  |
+| **Linear Regression**| 9.767393e-05 | 5.723599e-05 | 0.784011  |
+| **Elastic Net**      | 1.096777e-06 | 6.513339e-05 | 0.727660  |
+| **SVR**              | 2.310354e-06 | 1.268284e-06 | -0.208459 |
 
