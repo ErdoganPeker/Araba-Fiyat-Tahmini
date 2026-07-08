@@ -1,47 +1,92 @@
-🔹 🔸 **ARABA FİYATLARI TAHMİNİ PROJESİ** 🔸 🔹
+# 🚗 Araba Fiyat Tahmini — Car Price Prediction
 
-Otomobil fiyatları, birçok faktörden etkilenir; markası, modeli, üretim yılı, kilometresi, yakıt türü, vites tipi ve ek donanımlar gibi. Bu faktörlerin doğru şekilde analiz edilmesi, alıcılar için daha bilinçli satın alma kararları almayı ve satıcılar için rekabetçi fiyatlandırma stratejileri geliştirmeyi sağlar. Ancak, otomobil fiyatları genellikle çok dinamik ve karmaşık bir yapıdadır, bu yüzden doğru fiyat tahminleri yapmak her zaman kolay değildir.
+![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=flat&logo=python&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=flat&logo=jupyter&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-F7931E?style=flat&logo=scikit-learn&logoColor=white)
+![XGBoost](https://img.shields.io/badge/XGBoost-Gradient%20Boosting-FF6600?style=flat)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-Deep%20Learning-FF6F00?style=flat&logo=tensorflow&logoColor=white)
 
-Bu proje, araçların teknik özellikleri, performans kriterleri ve pazarla ilgili çeşitli faktörleri içeren bir veri setini kullanarak, araçların piyasa değerini doğru bir şekilde tahmin etmeyi amaçlamaktadır. Bu veri setinde yer alan bilgiler ile, doğru fiyat tahminleri yapmak için güçlü bir makine öğrenmesi modeli oluşturulması hedeflenmiştir.
+> Marka, model, yıl, kilometre, yakıt türü ve vites gibi özelliklere göre ikinci el araç fiyatını tahmin eden makine öğrenmesi ve derin öğrenme projesi.
 
-Bu çalışmanın temel amacı, araba fiyatlarını etkileyen faktörleri analiz etmek ve araçların satış fiyatlarını doğru bir şekilde tahmin edebilen bir model geliştirmektir. Projede istatistiksel analizler, makine öğrenmesi algoritmaları ve derin öğrenme teknikleri kullanılarak tahminler yapılacak ve elde edilen sonuçlar, otomotiv sektörü ve bireysel kullanıcılar için değerli bilgiler sunacaktır.
+---
 
-🔰 **VERİ SETİ**  
-Proje, araçların teknik özelliklerine dair çok çeşitli bilgileri içeren bir veri setine dayanıyor. Bu veri seti, araçların markası, modeli, üretim yılı, kilometresi, yakıt türü, vites tipi gibi bilgileri içerir. Bu verilerle araç fiyatlarını tahmin etmek için çeşitli makine öğrenmesi modelleri uygulanacaktır.
+## ✨ Özellikler
 
-🔰 **KULLANILAN ALGORİTMALAR**  
-Proje kapsamında, araç fiyatlarını tahmin etmek için çeşitli makine öğrenmesi algoritmaları kullanılacaktır. Bu algoritmalar arasında:
+- Kapsamlı Keşifsel Veri Analizi (EDA) ve interaktif görselleştirme
+- Birden fazla ML modelinin karşılaştırmalı değerlendirmesi (Linear Regression, Random Forest, XGBoost vb.)
+- Derin öğrenme modeli ile fiyat tahmini
+- Eğitilmiş en iyi model pickle formatında kaydedilmiş (`best_model.pkl`)
+- Tüm model sonuçları karşılaştırmalı raporlama (`model_results.csv`)
 
-- **Lineer Regresyon**
-- **Ridge Regresyon**
-- **Lasso Regresyon**
-- **Elastic Net**
-- **Destek Vektör Regresyonu (SVR)**
-- **Rastgele Orman Regresyonu (Random Forest)**
-- **Gradient Boosting Regresyonu**
-- **XGBoost**
-- **LightGBM**
-- **CatBoost**
-- **KNN Regresyonu** 
+---
 
-ve diğer birçok farklı model bulunmaktadır.
+## 🛠️ Teknoloji Yığını
 
-🔰 **EĞİTİM VE DEĞERLENDİRME METRİKLERİ**  
-Eğitim sırasında k-fold çapraz doğrulama yöntemi kullanılacak ve her modelin doğruluk oranları, R² skoru, MAE, MSE gibi metriklerle değerlendirilecektir. Bu metrikler, modellerin performansını karşılaştırmak ve en iyi tahmin modelini seçmek için kullanılacaktır. Ayrıca, aşağıdaki gibi sonuçlar elde edilmiştir:
+| Kategori | Araçlar |
+|---|---|
+| ML / DL | scikit-learn, XGBoost, TensorFlow / Keras |
+| Veri İşleme | Pandas, NumPy |
+| Görselleştirme | Matplotlib, Seaborn |
+| Model Yönetimi | Pickle |
+| Ortam | Jupyter Notebook |
 
-İşte sonuçların **e** cinsinden yazılmış hali:
+---
 
-| Model               | RMSE        | MAE         | R²        |
-|---------------------|-------------|-------------|-----------|
-| **CatBoost**         | 4.143331e-05 | 2.089880e-05 | 0.961134  |
-| **Random Forest**    | 4.961388e-05 | 2.444697e-05 | 0.944271  |
-| **XGBoost**          | 5.506966e-05 | 2.456692e-05 | 0.931341  |
-| **Gradient Boosting**| 5.081543e-05 | 2.317647e-05 | 0.941539  |
-| **LightGBM**         | 6.041947e-05 | 2.807798e-05 | 0.917353  |
-| **KNN Regressor**    | 6.545520e-05 | 3.206239e-05 | 0.903002  |
-| **Ridge Regression** | 9.726454e-05 | 5.745752e-05 | 0.785817  |
-| **Lasso Regression** | 9.767336e-05 | 5.723580e-05 | 0.784013  |
-| **Linear Regression**| 9.767393e-05 | 5.723599e-05 | 0.784011  |
-| **Elastic Net**      | 1.096777e-06 | 6.513339e-05 | 0.727660  |
-| **SVR**              | 2.310354e-06 | 1.268284e-06 | -0.208459 |
+## 📂 Proje Yapısı
 
+```
+Araba-Fiyat-Tahmini/
+├── car-price-prediction.ipynb   # Ana analiz ve model eğitim notebook'u
+├── car details v4.csv           # Ham veri seti (Türk ikinci el araç pazarı)
+├── best_model.pkl               # Eğitilmiş en iyi model
+└── model_results.csv            # Tüm modellerin karşılaştırmalı sonuçları
+```
+
+---
+
+## 📊 Temel Sonuçlar
+
+- Türk ikinci el araç pazarına ait gerçek veri seti üzerinde çalışıldı
+- Marka, model, yıl, kilometre, yakıt türü ve şanzıman türü bağımsız değişken olarak kullanıldı
+- En iyi performans gösteren model pickle dosyası olarak dışa aktarıldı; doğrudan tahmin için kullanılabilir
+- Model karşılaştırma sonuçları `model_results.csv` dosyasında R², RMSE ve MAE metrikleriyle raporlandı
+
+---
+
+## 🚀 Başlangıç
+
+### Gereksinimler
+
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn xgboost tensorflow jupyter
+```
+
+### Çalıştırma
+
+```bash
+git clone https://github.com/ErdoganPeker/Araba-Fiyat-Tahmini.git
+cd Araba-Fiyat-Tahmini
+jupyter notebook car-price-prediction.ipynb
+```
+
+### Eğitilmiş Modeli Kullanma
+
+```python
+import pickle, pandas as pd
+
+with open("best_model.pkl", "rb") as f:
+    model = pickle.load(f)
+
+sample = pd.DataFrame([{
+    "brand": "Toyota", "model": "Corolla", "year": 2019,
+    "km": 45000, "fuel": "Benzin", "transmission": "Otomatik"
+}])
+print(f"Tahmini Fiyat: {model.predict(sample)[0]:,.0f} TL")
+```
+
+---
+
+## 👤 Geliştirici
+
+**Erdoğan Yasin Peker**
+[GitHub](https://github.com/ErdoganPeker) · [LinkedIn](https://www.linkedin.com/in/erdogan-yasin-peker-b107ba24b/)
